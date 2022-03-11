@@ -24,3 +24,14 @@ HTTP authentication schemes provided in Django Rest Framework.
 6. Start the Django application.
     `./manage.py runserver`
 
+## Answers
+
+**Question 1:** By default, Django uses basic and session authentication. This can be configured by modifying the DEFAULT_AUTHENTICATION_CLASSES attribute inside the REST_FRAMEWORK dictionary in settings.py.
+
+**Question 2:** httpie uses basic authentication when the -a flag is provided.
+
+**Question 3:** In the case of session authentication, a session ID is assigned to the user upon authentication which must then be sent with each request as a cookie. By looking up the provided session ID, the server can retrieve the associated session data. By contrast, token authentication works by associating a client with a given token on the backend which must then be sent as an Authorization HTTP header with each request. Unlike session authentication, token authentication does not require the user to first login; they can simploy provide their assigned token. An advantage of token authentication over basic authentication is that a user can be associated with multiple tokens which can allow for different privileges. 
+
+**Question 4:** OAuth2 works by delegating authentication to another service such as Google or Facebook which then grants the application access to the user's account. This process is initiated by the client requesting the user to grant access to the authenticating service. If the user grants access to our application, it requests an access token from the authenticating service which, if granted, can be used to authenticate future requests.
+
+**Question 5:** https://github.com/JoshuaBillson/authentication-lab.git
