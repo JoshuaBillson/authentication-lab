@@ -24,3 +24,14 @@ HTTP authentication schemes provided in Django Rest Framework.
 6. Start the Django application.
     `./manage.py runserver`
 
+## Answers
+
+**Question 1:** abc
+
+**Question 2:** abc
+
+**Question 3:** abc
+
+**Question 4:** abc
+
+**Question 5:** abc
